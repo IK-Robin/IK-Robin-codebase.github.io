@@ -1,0 +1,41 @@
+
+@import '../../style//key style.scss';
+.sidebar{
+    position: sticky;
+	overflow: hidden;
+	overflow-y: scroll;
+	height: 100vh;
+
+    .brand{
+        color: red;
+        font-family: $ralewy;
+        font-weight: bolder;
+    }
+
+
+    .nav{
+        ul{
+            list-style: none;
+          
+            text-align:left;
+
+            li {
+                padding: 5px 0 5px ;
+                ;
+                // border-bottom: 1px solid rgb(230, 220, 220);
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                 
+                    text-transform: capitalize;
+                    &:hover{
+                        // background-color: lightgreen;
+                        color: gray;
+                    }
+                }
+              
+            }
+        }
+    }
+}
