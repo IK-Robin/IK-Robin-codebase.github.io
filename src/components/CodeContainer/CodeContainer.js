@@ -10,7 +10,7 @@ function CodeContainer({code_title,codeItem}) {
     <div className={`${style.copy_Clipbord} app_flex`}>
  
     <div className={style.copy}>
-        <button type='button' > copp</button>
+        <button type='button' > copy</button>
     </div>
     </div>
         <pre>
