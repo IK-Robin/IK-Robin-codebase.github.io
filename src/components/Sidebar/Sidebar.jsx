@@ -1,8 +1,13 @@
 import React from "react";
 import style from "./Sidebar.module.scss";
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 function Sidebar() {
-    const navitem = ["nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex"];
+  const activeNavlink = ({isActive}) => {
+      return{
+        color:isActive? 'red':'black'
+      }
+  }
+    const navitem = ["home","Main","BodyContaine", "user", "codepage", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex","nav", "container", "footer", "link", "flex"];
   return (
     <div className={style.sidebar}>
       <div className={style.brand}>
@@ -11,10 +16,11 @@ function Sidebar() {
       <div className={style.search}> search</div>
       <nav className={style.nav}>
         <ul>
+         
        {
-        navitem.map((item) => {
-            return(
-                <li> <Link  to={`#${item}`}> {item} </Link></li>
+        navitem.map((item, index) => {
+            return( 
+                <li key={index * Math.random(88543 *359784357)}> <NavLink style={activeNavlink}  to={item === 'home' ? '/' : `${item}`}> {item} </NavLink></li>
             )
         })
        }

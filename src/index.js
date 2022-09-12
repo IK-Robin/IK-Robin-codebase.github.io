@@ -3,9 +3,10 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 // import your route components too
-import App from './App';
+import  App from './Daynamic'
 import './style/index.scss';
-const root = ReactDOM.createRoot(
+
+ const root = ReactDOM.createRoot(
   document.getElementById("root")
 );
 
