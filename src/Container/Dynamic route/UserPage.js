@@ -1,6 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet, Route, Routes } from 'react-router-dom'
+import TabPage from './Tabpage'
 import users from './userData'
+import UserDetail from './UserDetail'
 
 function UserPage() {
 // Getting the userId from match props and display the user from the users array
@@ -14,13 +16,16 @@ function UserPage() {
           
           return (
             <h5 key={index}>
-              <Link to={`/UserDetail/${index + 1} `} > {user.name}</Link>
+              <Link to={`userdetail/${user.name} `} > {user.name}</Link>
             </h5>
           )
         }) 
       }
     </div>
-
+    <Routes>
+        <Route path='userdetail/:userName/*'  element ={<UserDetail/>} />
+      </Routes>
+ 
     
 </>
   )
