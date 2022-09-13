@@ -3,7 +3,7 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 // import your route components too
-import  App from './Daynamic'
+import  App from './App'
 import './style/index.scss';
 
  const root = ReactDOM.createRoot(
