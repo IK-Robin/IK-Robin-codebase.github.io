@@ -1,27 +1,17 @@
-import Main from "./Container/Main";
-import BodyContainer from "./Container/bodyContainer/BodyContainer";
-import { Sidebar } from "./components";
-import { Route, Routes } from "react-router-dom";
+import { CodeBody, Sidebar } from "./components";
+import { Link, Route, Routes } from "react-router-dom";
 import style from "./style/app.module.scss";
 import { Container } from "react-bootstrap";
-import {Error} from './components'
-import User from "./Container/User";
-import CodePage from "./Container/CodePage";
+import { Error } from "./components";
+import Test from "./Loading";
+import { Home, CodeDetails, CodePage } from "./Container";
+import CopyExample from "./components/CopyClipbord";
 
+import Timer from "./Timer";
 
 function App() {
-  
-
   return (
     <>
-      {/* <Sidebar/> 
-    <Routes>
-      
-      <Route path="/" element={<Main />} />
-      <Route path="/bodycontainer" element={<BodyContainer />} />
-      
-    </Routes> */}
-
       <Container fluid className={`${style.app} ${style.container_fluid}`}>
         <div className={`${style.app_flex} app_flex `}>
           {/* Sidebar section  */}
@@ -32,14 +22,25 @@ function App() {
           {/* body section start  */}
           <Container className={` ${style.body}`}>
             <Routes>
-              <Route path="/" element={<BodyContainer />} />
-              <Route path="/BodyContaine" element={<BodyContainer />} />
-              <Route path="codepage" element={<CodePage/>} />
-             
-              <Route path="codepage/user/:userId/:userName/:userText" element={<User/>} />
-              
+              {/* <Route  path="/">
+          <Route index element={<Home />} />
 
-              <Route path="*" element ={ <Error/>} />
+          <Route path="/users/*" element={<UserPage />} />
+          
+          <Route path="userdetail/:userName/*" element={<UserDetail />} />
+          <Route path="*" element ={ <Error/>} />
+       
+
+          </Route> */}
+
+              <Route path="/">
+                <Route index element={<CodePage />} />
+                <Route path="/copy" element={<CopyExample/>} />
+                <Route path="/users/*" element={<CodePage />} />
+                <Route path ='test' element={<Test/>} />
+                <Route path ='time' element={<Test/>} />
+                <Route path ='timer' element={<Timer/>} />
+              </Route>
             </Routes>
           </Container>
 

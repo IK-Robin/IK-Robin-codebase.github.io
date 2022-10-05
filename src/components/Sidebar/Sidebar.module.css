@@ -1,0 +1,27 @@
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+}
+.sidebar .brand {
+  color: red;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+}
+.sidebar .nav ul {
+  list-style: none;
+  text-align: left;
+}
+.sidebar .nav ul li {
+  padding: 5px 0 5px;
+}
+.sidebar .nav ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+}
+.sidebar .nav ul li a:hover {
+  color: gray;
+}/*# sourceMappingURL=Sidebar.module.css.map */

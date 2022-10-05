@@ -1,0 +1,18 @@
+.raw_code {
+  background-color: #000;
+  color: white;
+  text-align: left;
+  border-radius: 17px;
+  margin-bottom: 40px;
+}
+.raw_code .copy_Clipbord {
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+.raw_code .copy_Clipbord div button {
+  background-color: black;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+}/*# sourceMappingURL=codeContainer.module.css.map */

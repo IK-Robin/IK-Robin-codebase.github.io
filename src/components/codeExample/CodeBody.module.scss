@@ -1,0 +1,18 @@
+.codeOutput{
+    width: 720px;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    // overflow-y: scroll;
+
+    .codeTitle{
+        text-align: center;
+        p{
+            text-align: left;
+            text-transform: capitalize;
+        }
+    }
+   
+} 
